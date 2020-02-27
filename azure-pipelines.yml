@@ -90,3 +90,8 @@ jobs:
         inputs:
           testResultsFiles: '**/test-report.xml'
           testRunTitle: 'Test results'
+      - task: oc-cmd@2
+        inputs:
+          openshiftService: 'OpenshiftOnline'
+          version: '4'
+          cmd: 'oc get project'
